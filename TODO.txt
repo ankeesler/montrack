@@ -7,11 +7,14 @@ stories:
 - DONE: table shows mon names
 - DONE: table shows mon icon
 - DONE: error when wrong family entered
-- i can delete mon from table
-- i can see iv on table
+- DONE: i can see iv on table
 - i can see ev on table
+- mon info doesn't look like crap
 - i can input battle and it will change ev
 - i can click a button to evolve (evolve button has next form icon on it)
+- i can delete mon from table
+- mon actions don't look like crap
+- add mon form doesn't look like crap
 - mon are persisted across reload
 - sort table by name
 - sort table by family

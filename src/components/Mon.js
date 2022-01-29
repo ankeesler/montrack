@@ -1,12 +1,18 @@
 import PropTypes from 'prop-types'
 
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+
+import MonInfo from './MonInfo'
+
 const Mon = ({ mon }) => {
     return (
-        <div>
-            <h3>{mon.name}</h3>
-            <img src={mon.imgSrc} alt={mon.name} />
-            </div>
-  )
+            <Container>
+            <Row>
+            <MonInfo mon={mon} />
+            </Row>
+            </Container>
+    )
 }
 
 Mon.propTypes = {

@@ -7,6 +7,7 @@ test('can get mon', () => {
         expect(mon)
         expect(mon.name).toBe(wantName)
         expect(mon.imgSrc).toBe(wantImgSrc)
+        expect(mon.ivs).toBe([40, 45, 35, 65, 55, 70])
     })
 });
 

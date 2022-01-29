@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react'
+
+import Container from 'react-bootstrap/Container'
+
 import Header from './components/Header'
 import AddMon from './components/AddMon'
 import Mons from './components/Mons'
@@ -20,16 +23,15 @@ const App = ({ pokeclient }) => {
         }
         newMon.name = mon.name
         const newMons = [...mons, newMon]
-        console.log(newMons)
         setMons(newMons)
     }
 
   return (
-    <div className='container'>
+    <Container >
           <Header title='montrack'/>
           <AddMon onAdd={addMon}/>
           <Mons mons={mons} />
-    </div>
+    </Container>
   );
 }
 
