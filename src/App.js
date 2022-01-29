@@ -3,17 +3,20 @@ import Header from './components/Header'
 import AddMon from './components/AddMon'
 import Mons from './components/Mons'
 
-function App() {
+const App = ({ pokeclient }) => {
     const [mons, setMons]  = useState([])
 
     useEffect(() => {
         // TODO: load from store
-        const initialMons = [{name:'treecko'}, {name: 'poochyena'}, {name: 'zigzagoon'}]
+        const initialMons = []
         setMons(initialMons)
   }, [])
 
-    const addMon = (mon) => {
-        const newMons = [...mons, mon]
+    const addMon = async (mon) => {
+        const newMon = await pokeclient.getMon(mon.family)
+        newMon.name = mon.name
+        const newMons = [...mons, newMon]
+        console.log(newMons)
         setMons(newMons)
     }
 

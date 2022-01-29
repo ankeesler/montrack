@@ -1,8 +1,11 @@
 import PropTypes from 'prop-types'
 
 const Mon = ({ mon }) => {
-  return (
-          <h3>{mon.name}</h3>
+    return (
+        <div>
+            <h3>{mon.name}</h3>
+            <img src={mon.imgSrc} alt={mon.name} />
+            </div>
   )
 }
 

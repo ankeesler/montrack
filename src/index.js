@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Pokeclient from './pokeclient.js'
+
+const pokeclient = Pokeclient('https://pokeapi.co/api/v2')
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <App pokeclient={pokeclient} />
   </React.StrictMode>,
   document.getElementById('root')
 );

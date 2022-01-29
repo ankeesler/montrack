@@ -1,10 +1,11 @@
 chore:
 - fix emacs auto spacing
 - add jsx auto formatter
+- undo 'no-cors'
 
 stories:
 - DONE: table shows mon names
-- table shows mon icon
+- DONE: table shows mon icon
 - error when wrong family entered
 - i can delete mon from table
 - i can see iv on table
