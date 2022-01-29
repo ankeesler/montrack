@@ -14,6 +14,10 @@ const App = ({ pokeclient }) => {
 
     const addMon = async (mon) => {
         const newMon = await pokeclient.getMon(mon.family)
+        if (newMon === null) {
+            alert(`unknown mon family: '${mon.family}'`)
+            return
+        }
         newMon.name = mon.name
         const newMons = [...mons, newMon]
         console.log(newMons)

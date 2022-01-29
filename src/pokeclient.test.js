@@ -9,3 +9,10 @@ test('can get mon', () => {
         expect(mon.imgSrc).toBe(wantImgSrc)
     })
 });
+
+test('can return null mon for non existent families', () => {
+    const client = Pokeclient(`https://pokeapi.co/api/v2`)
+    client.getMon('nah').then(() => {
+        expect(mon).toBeNull()
+    })
+});
