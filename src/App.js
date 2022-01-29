@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react'
+import Header from './components/Header'
+import AddMon from './components/AddMon'
+import Mons from './components/Mons'
 
 function App() {
+    const [mons, setMons]  = useState([])
+
+    useEffect(() => {
+        // TODO: load from store
+        const initialMons = [{name:'treecko'}, {name: 'poochyena'}, {name: 'zigzagoon'}]
+        setMons(initialMons)
+  }, [])
+
+    const addMon = (mon) => {
+        const newMons = [...mons, mon]
+        setMons(newMons)
+    }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+          <Header title='montrack'/>
+          <AddMon onAdd={addMon}/>
+          <Mons mons={mons} />
     </div>
   );
 }
