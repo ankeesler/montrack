@@ -8,7 +8,7 @@ stories:
 - DONE: table shows mon icon
 - DONE: error when wrong family entered
 - DONE: i can see iv on table
-- i can see ev on table
+- DONE: i can see ev on table
 - mon info doesn't look like crap
 - i can input battle and it will change ev
 - i can click a button to evolve (evolve button has next form icon on it)

@@ -9,7 +9,7 @@ const Pokeclient = (baseUrl) => {
 
         const data = await res.json()
         const ivs = data.stats.map(s => s.base_stat)
-        const mon = {family: data.name, imgSrc: data.sprites.front_default, ivs: ivs}
+        const mon = {family: data.name, imgSrc: data.sprites.front_default, ivs: ivs, evs: [0,0,0,0,0,0]}
 
         return mon
     }

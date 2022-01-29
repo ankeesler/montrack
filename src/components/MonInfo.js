@@ -15,6 +15,9 @@ const MonInfo = ({ mon }) => {
             <Col>
             <Values title='IVs' values={mon.ivs} />
             </Col>
+            <Col>
+            <Values title='EVs' values={mon.evs} />
+            </Col>
             </Container>
     )
 }
