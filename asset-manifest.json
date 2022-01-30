@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/montrack/static/css/main.1a8a0596.css",
+    "main.js": "/montrack/static/js/main.4944566a.js",
+    "static/js/787.66cb096e.chunk.js": "/montrack/static/js/787.66cb096e.chunk.js",
+    "index.html": "/montrack/index.html",
+    "main.1a8a0596.css.map": "/montrack/static/css/main.1a8a0596.css.map",
+    "main.4944566a.js.map": "/montrack/static/js/main.4944566a.js.map",
+    "787.66cb096e.chunk.js.map": "/montrack/static/js/787.66cb096e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a8a0596.css",
+    "static/js/main.4944566a.js"
+  ]
+}
