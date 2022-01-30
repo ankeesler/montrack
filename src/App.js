@@ -40,6 +40,10 @@ const App = ({ pokeclient }) => {
 
     const onBattle = async (mon, opponentFamily) => {
         const opponent = await pokeclient.getMon(opponentFamily)
+        if (opponent === null) {
+            alert(`unknown opponent mon family: '${opponentFamily}'`)
+            return
+        }
 
         const newMons = [...mons]
         const i = newMons.findIndex(m => m.name === mon.name)
@@ -49,6 +53,11 @@ const App = ({ pokeclient }) => {
 
     const onEvolve = async (mon, evolution) => {
         const newMon = await pokeclient.getMon(evolution)
+        if (newMon === null) {
+            alert(`unknown evolution mon family: '${evolution}'`)
+            return
+        }
+
         newMon.name = mon.name
         newMon.evs = mon.evs
 

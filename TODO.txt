@@ -16,10 +16,11 @@ stories:
 - DONE: i can delete mon from table
 - DONE: mon are persisted across reload
 - DONE: ship to github pages
+- add rebattle buttons for most recent battles
+- IVs are colored by range
+- IVs and EVs show what stat they map to
 - favicon is custom
 - sort table by name
 - sort table by family
-- IVs are colored by range
-- IVs and EVs show what stat they map to
 - make whole ui look better
 - make pokemon name editable
