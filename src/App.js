@@ -11,9 +11,18 @@ const App = ({ pokeclient }) => {
 
     useEffect(() => {
         // TODO: load from store
-        const initialMons = []
-        setMons(initialMons)
+        const monsString = localStorage.getItem('mons')
+        if (!monsString) {
+            setMons([])
+        } else {
+            setMons(JSON.parse(monsString))
+        }
   }, [])
+
+    const updateMons = (mons) => {
+        localStorage.setItem('mons', JSON.stringify(mons))
+        setMons(mons)
+    }
 
     const addMon = async (mon) => {
         const newMon = await pokeclient.getMon(mon.family)
@@ -26,7 +35,7 @@ const App = ({ pokeclient }) => {
         newMon.evs = [0, 0, 0, 0, 0, 0]
 
         const newMons = [...mons, newMon]
-        setMons(newMons)
+        updateMons(newMons)
     }
 
     const onBattle = async (mon, opponentFamily) => {
@@ -35,7 +44,7 @@ const App = ({ pokeclient }) => {
         const newMons = [...mons]
         const i = newMons.findIndex(m => m.name === mon.name)
         newMons[i].evs.forEach((ev, j) => newMons[i].evs[j] += opponent.evYields[j])
-        setMons(newMons)
+        updateMons(newMons)
     }
 
     const onEvolve = async (mon, evolution) => {
@@ -47,13 +56,13 @@ const App = ({ pokeclient }) => {
         const i = newMons.findIndex(m => m.name === mon.name)
         newMons[i] = newMon
 
-        setMons(newMons)
+        updateMons(newMons)
     }
 
     const onDelete = async (mon) =>{
         if (window.confirm(`are you sure you want to delete ${mon.name}?`)) {
             const newMons = mons.filter(m => m.name !== mon.name)
-            setMons(newMons)
+            updateMons(newMons)
         }
     }
 

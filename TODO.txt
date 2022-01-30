@@ -14,11 +14,12 @@ stories:
 - DONE: i can input battle and it will change ev
 - DONE: i can click a button to evolve (evolve button has next form icon on it)
 - DONE: i can delete mon from table
-- mon are persisted across reload
-- sort table by name
-- sort table by family
+- DONE: mon are persisted across reload
 - favicon is custom
 - ship to github pages
+- sort table by name
+- sort table by family
 - IVs are colored by range
 - IVs and EVs show what stat they map to
 - make whole ui look better
+- make pokemon name editable
