@@ -1,7 +1,7 @@
 const Pokeclient = (baseUrl) => {
     const c = {}
     c.getMon = async (family) => {
-        const url = `${baseUrl}/pokemon/${family}`
+        const url = `${baseUrl}/pokemon/${family.toLowerCase()}`
         const res = await fetch(url)
         if (res.status === 404) {
             return null

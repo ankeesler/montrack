@@ -1,16 +1,13 @@
 import PropTypes from 'prop-types'
 
 import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
 
 import MonInfo from './MonInfo'
 
 const Mon = ({ mon }) => {
     return (
-            <Container>
-            <Row>
+            <Container className="m-1 p-1 border border-secondary rounded">
             <MonInfo mon={mon} />
-            </Row>
             </Container>
     )
 }

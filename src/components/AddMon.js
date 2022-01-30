@@ -20,7 +20,7 @@ const AddMon = ({ onAdd }) => {
     }
 
   return (
-          <Form className='p-3 border border-primary rounded' onSubmit={onSubmit}>
+          <Form className='m-3 p-3 border border-primary rounded' onSubmit={onSubmit}>
 
           <Form.Group className='mb-3'>
           <Form.Label>Name</Form.Label>
