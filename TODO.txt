@@ -15,8 +15,8 @@ stories:
 - DONE: i can click a button to evolve (evolve button has next form icon on it)
 - DONE: i can delete mon from table
 - DONE: mon are persisted across reload
-- favicon is custom
 - ship to github pages
+- favicon is custom
 - sort table by name
 - sort table by family
 - IVs are colored by range
