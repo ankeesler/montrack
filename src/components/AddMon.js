@@ -1,5 +1,8 @@
 import { useState } from 'react'
 
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+
 const AddMon = ({ onAdd }) => {
       const [name, setName] = useState('')
   const [family, setFamily] = useState('')
@@ -17,17 +20,21 @@ const AddMon = ({ onAdd }) => {
     }
 
   return (
-          <form className='add-form' onSubmit={onSubmit}>
-          <div className='form-control'>
-          <label>Name</label>
-          <input type='text' placeholder='Charboi' value={name} onChange={(e) => setName(e.target.value)} />
-          </div>
-          <div className='form-control'>
-          <label>Family</label>
-          <input type='text' placeholder='Charizard' value={family} onChange={(e) => setFamily(e.target.value)} />
-          </div>
-          <input type='submit' value='Add Mon' className='btn btn-block' />
-          </form>
+          <Form className='p-3 border border-primary rounded' onSubmit={onSubmit}>
+
+          <Form.Group className='mb-3'>
+          <Form.Label>Name</Form.Label>
+          <Form.Control type='text' placeholder='Charboi' value={name} onChange={(e) => setName(e.target.value)} />
+          </Form.Group>
+
+          <Form.Group className='mb-3'>
+          <Form.Label>Family</Form.Label>
+          <Form.Control type='text' placeholder='Charizard' value={family} onChange={(e) => setFamily(e.target.value)} />
+          </Form.Group>
+
+          <Button variant="primary" type="submit">Add Mon</Button>
+
+          </Form>
   )
 }
 
